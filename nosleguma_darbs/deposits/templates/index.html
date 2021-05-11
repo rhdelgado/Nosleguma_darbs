@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for user in object_list %}
+            <li>
+                ID: {{ user.id }} <br>
+            Deposit (Euro): {{ user.deposit}} <br>
+            Term (Years): <strong>{{ user.term }}</strong><br>
+            Rate (decimal): {{ user.rate }}<br>
+                {{ instance.id }} - <a href="{{ instance.get_absolute_url }}">{{ instance.title }}<br>
+            </li>
+
+        {% endfor %}
+    </ul>
+</body>
+</html>
